@@ -62,11 +62,20 @@ function Hero() {
             
            
             <div className="container">
-            <h1 align="center">{movie.title}</h1>  
-              <div className="logo">
+             
               
+            
+            <div className="buttons flex a-center"  >
+            <h3
+                className="name"
+                onClick={() => navigate(`/movie/${movie.id}`)} // Navigate to the movie review page
+              >
+                {movie.title}
+              </h3>
+            
               </div>
-              <div className="buttons flex">
+              <div className="buttons flex a-center"  >
+             
                 <button
                   onClick={() => navigate(`/player?movieId=${movie.id}`)}
                   className="flex j-center a-center"

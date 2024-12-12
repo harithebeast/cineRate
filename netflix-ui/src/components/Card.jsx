@@ -46,7 +46,7 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
         <img
           src={`https://image.tmdb.org/t/p/w500${movieData.image}`}
           alt="card"
-          onClick={() => navigate(`/player?movieId=${movieData.id}`)}
+          onClick={() => navigate(`/movie/${movieData.id}`)} // Navigate to the movie review page
         />
 
         {isHovered && (
@@ -55,13 +55,13 @@ export default React.memo(function Card({ index, movieData, isLiked = false }) {
               <img
                 src={`https://image.tmdb.org/t/p/w500${movieData.image}`}
                 alt="card"
-                onClick={() => navigate(`/player?movieId=${movieData.id}`)}
+                onClick={() => navigate(`/movie/${movieData.id}`)} // Navigate to the movie review page
               />
             </div>
             <div className="info-container flex column">
               <h3
                 className="name"
-                onClick={() => navigate(`/player?movieId=${movieData.id}`)}
+                onClick={() => navigate(`/movie/${movieData.id}`)} // Navigate to the movie review page
               >
                 {movieData.name}
               </h3>
@@ -124,6 +124,7 @@ const Container = styled.div`
   height: 100%;
   cursor: pointer;
   position: relative;
+  color:white;
   img {
     border-radius: 0.2rem;
     width: 100%;
